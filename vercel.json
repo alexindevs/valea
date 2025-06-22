@@ -1,5 +1,5 @@
 {
-  "cron": [
+  "crons": [
     {
       "path": "/api/letters/send",
       "schedule": "0 8 * * *"
