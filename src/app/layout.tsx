@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     title: "Valea",
     description: "Letters from your past, delivered just in time.",
     images: ["/valea_meta_image.png"],
-    image: "/valea_meta_image.png",
     url: "https://valea-lime.vercel.app",
   },
   twitter: {
