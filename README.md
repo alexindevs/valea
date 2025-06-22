@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💌 Valea
 
-## Getting Started
+_“Letters from your past, delivered just in time.”_
 
-First, run the development server:
+**Valea** is a time-capsule messaging system for the emotionally chaotic, the soft-hearted, and the temporally curious.  
+Write a letter to yourself (or someone else) during moments of clarity, chaos, love, or grief — and let it go.  
+You don’t pick the delivery time. The system does. And when the time is right, the letter returns — quietly — like a whisper from the past.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🪄 Features
+
+- 🌸 **Anonymous Letter Writing** — No logins. No tracking. Just you and your words.
+- ⏳ **Randomized Future Delivery** — Letters are delivered between 7-365 days from submission.
+- 📎 **Optional Attachments** — Upload a file or image to send with your message.
+- 💌 **Email Delivery Engine** — Letters arrive directly in the recipient’s inbox when the moment is right.
+- 🛠️ **Admin Stats Dashboard** — View real-time stats on sent, pending, and total letters.
+
+---
+
+## 🧠 Tech Stack
+
+- **Frontend**: Next.js App Router, TailwindCSS, ShadCN/UI
+- **Backend**: API Routes with Mongoose + MongoDB
+- **Email Delivery**: Nodemailer
+- **File Uploads**: Cloudinary
+- **Cron Jobs**: Vercel Cron (daily @ 8AM UTC)
+
+---
+
+## 🧪 .env Configuration
+
+```env
+# MongoDB
+MONGODB_URI=mongodb+srv://...
+
+# Cloudinary
+CLOUDINARY_CLOUD_NAME=...
+CLOUDINARY_API_KEY=...
+CLOUDINARY_API_SECRET=...
+
+# Email (Nodemailer)
+SMTP_USER=...
+SMTP_PASS=...
+````
+
+---
+
+## 📬 Cron Job Setup (Vercel)
+
+To send letters every day at **8AM UTC**, I used this in my `vercel.json`:
+
+```json
+{
+  "cron": [
+    {
+      "path": "/api/letters/send",
+      "schedule": "0 8 * * *"
+    }
+  ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧘 Philosophy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Valea isn’t about control. It’s about surrender to timing, to healing, to randomness, and to the parts of you that needed to speak.
 
-## Learn More
+You don’t get to decide when your message arrives.
+But you *will* receive it when you need it.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🫶 Credits
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with grief, grace, and a little mischief by [Alexin](https://github.com/alexindevs).
+*“Because sometimes healing shows up in your inbox.”*

@@ -279,7 +279,7 @@ export const createEmailTemplate = (
         <!-- Back to Valea -->
         <div class="back-to-valea">
             <p>Want to send another letter to your future self?</p>
-            <a href="https://valea.vercel.app" class="valea-btn">Visit Valea</a>
+            <a href="https://valea-lime.vercel.app" class="valea-btn">Visit Valea</a>
         </div>
     </div>
 </body>

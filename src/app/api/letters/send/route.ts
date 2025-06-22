@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
 
     try {
       await transporter.sendMail({
-        from: `"Valea" <noreply@valea.vercel.app>`,
+        from: `"Valea" <noreply@valea-lime.vercel.app>`,
         to: letter.email,
         subject: "There's a letter for you!",
         html: emailBody,
