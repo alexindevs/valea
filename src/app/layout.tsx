@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: "Letters from your past, delivered just in time.",
     images: ["/valea_meta_image.png"],
   },
-  metadataBase: new URL('https://acme.com'),
+  metadataBase: new URL('https://valea-lime.vercel.app'),
 };
 
 export default function RootLayout({
